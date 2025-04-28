@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fryzjerstwo</title>
+    <link rel="stylesheet" href="styl8.css" />
+  </head>
+  <body>
+    <section id="first-left">
+      <h1><a href="index.html">SALON FRYZJERSKI</a></h1>
+    </section>
+    <section class="second-left">
+      <h2>PROMOCJA</h2>
+      <input type="radio" name="radio" id="Krotkie" value="20" />
+      <label for="Krotkie">Krótkie</label>
+      <input type="radio" name="radio" id="Srednie" value="30" />
+      <label for="Srednie">Średnie</label>
+      <input type="radio" name="radio" id="Poldlugie" value="40" />
+      <label for="Poldlugie">Półdługie</label>
+      <input type="radio" name="radio" id="Dlugie" value="50" />
+      <label for="Dlugie">Długie</label>
+      <button onclick="Kalkuluj()">Odkryj promocję</button>
+      <span id="puste"></span>
+    </section>
+
+    <section id="third-left">
+      <p>Witaj! Miło nam, że odwiedziłeś nasz salon. Sprawdź promocje!</p>
+      <h4>Kontakt: 444 555 666</h4>
+    </section>
+
+    <section id="first-left">
+      <h4><a href="fryzura.html">Ceny strzyżenia</a></h4>
+      <table>
+        <tr>
+          <th>Długość włosów</th>
+          <th>Cena</th>
+        </tr>
+        <tr>
+          <td>Krótkie</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Średnie</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Półdługie</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>Długie</td>
+          <td>50</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="second-right">
+      <img src="obraz1.jpg" alt="Fryzjerka" />
+    </section>
+
+    <footer>
+      <p>Autor:06272500572</p>
+    </footer>
+    <script>
+      function Kalkuluj() {
+        const wartostCzegos = document.querySelector(
+          'input[name="radio"]:checked'
+        ).value;
+        const pustyElem = document.getElementById("puste");
+        pustyElem.innerHTML = `cena promocyjna:${wartostCzegos}`;
+      }
+    </script>
+  </body>
+</html>
